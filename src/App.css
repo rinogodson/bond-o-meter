@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@font-face {
+    font-family: 'LED';
+    src: url('/LEDLIGHT.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #170012 repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 2px);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    -webkit-tap-highlight-color: transparent;
+}
+
+* {
+    outline: none
+}
+
+.InputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+}
+.title {
+    position: absolute;
+    top: 20px;
+    font-family: 'LED';
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #FD0887;
+    text-shadow: 0px 0px 20px #BA0057;
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+        text-shadow: 0px 0px 20px #BA0057;
+    }
+    50% {
+        opacity: 0.8;
+        text-shadow: 0px 0px 10px #BA0057;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0px 0px 20px #BA0057;
+    }
+}
+
+.CalcBt{
+    background-color: #f8c0f0;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    color: #fff;
+    margin-top: 60px;
+    font-family: 'JetBrains Mono', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: CalcBt 1s infinite;
+}
+
+@keyframes CalcBt {
+    0% {
+        font-size: 40px
+    }
+    50% {
+        font-size: 35px
+    }
+    100% {
+        font-size: 40px
+    }
+}
+
+.CalcBt:hover{
+    transform: scale(1.1);
+}
+.CalcBt:active{
+    transform: scale(0.9);
+}

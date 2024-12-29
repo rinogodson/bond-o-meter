@@ -1,0 +1,20 @@
+.nameInput{
+    background-color: rgba(52, 52, 52, 0);;
+    border: none;
+    border-bottom: 1px solid #ffffffe2;
+    width: fit-content;
+    height: 50px;
+    transition: all 0.3s;
+    border-radius: 10px 10px 0 0;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    font-family: Instrument Serif;
+}
+
+.nameInput:focus{
+    border-bottom: 1px solid #ff1e69;
+    color: #ffcfdf;
+    background-color: rgba(0, 0, 0, 0.496);
+    border-radius: 20px 20px 0 0;
+}
