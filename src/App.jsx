@@ -103,6 +103,7 @@ function App() {
       >
         {emoji}
       </button>
+      <a className="link" href="https://github.com/rinogodson/bond-o-meter/blob/master/Algorithm.md">Algorithm Used</a>
     </div>
   );
 }

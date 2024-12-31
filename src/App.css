@@ -36,7 +36,7 @@ body {
     position: absolute;
     top: 20px;
     font-family: 'LED';
-    font-size: 48px;
+    font-size: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,4 +103,13 @@ body {
     max-width: 60ch;
     color: #fff;
     margin-bottom: 40px;
+}
+
+.link{
+    position: absolute;
+    bottom: 18px;
+    color: #c808fd;
+    font-weight: bold;
+
+    font-family: JetBrains Mono;
 }

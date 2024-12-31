@@ -1,4 +1,4 @@
-# The Algorithm of Love-o-Meter
+# The Algorithm of Bond-o-Meter
 
 This is a playful method that estimates the romantic compatibility between 2 individuals based on their names.
 This method is intended for entertainment and should not be taken as a serious measure of compatibility. It is kinda like FLAMES but more advanced. Let's see the different steps of the algo:
