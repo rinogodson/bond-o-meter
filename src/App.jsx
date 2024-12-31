@@ -23,6 +23,10 @@ function App() {
   const [names, setNames] = React.useState(["", ""]);
   const [emoji, setEmoji] = React.useState("❤️");
   const [isExploding, setIsExploding] = React.useState(false);
+
+  const [supportText, setSupportText] = React.useState("Enter names and click to calculate the bond.");
+
+
   return (
     <div
       style={{
@@ -35,12 +39,12 @@ function App() {
       {isExploding && (
         <ConfettiExplosion duration={3000} particleCount={love * 2} />
       )}
-      <h1 className="title">Love o Meter</h1>
+      <h1 className="title">Bond o Meter</h1>
 
       <GaugeComponent
         style={{
           width: "400px",
-          marginBottom: "100px",
+          marginBottom: "30px",
           fontFamily: "JetBrains Mono",
         }}
         value={love}
@@ -75,7 +79,7 @@ function App() {
           color: "#fff",
         }}
       />
-
+      <h1 className="support">{supportText}</h1>
       <div className="InputContainer">
         <Input placeholder="Romeo" names={names} setNames={setNames} />
         <Input placeholder="Juliet" names={names} setNames={setNames} />
@@ -86,7 +90,9 @@ function App() {
         onClick={() => {
           const sortedNames = [...names].sort();
           setLove(heart(sortedNames[0], sortedNames[1]));
-          setEmoji(showEmoji(heart(sortedNames[0], sortedNames[1])));
+          let text = showEmoji(heart(sortedNames[0], sortedNames[1]));
+          setEmoji(text[0]);
+          setSupportText(text[1]);
           setIsExploding(true);
           playGuageSound();
           setTimeout(() => {
@@ -272,18 +278,18 @@ function heart(str1, str2) {
 }
 function showEmoji(res) {
   if (res < 10) {
-    return "😤";
-  } else if (res < 25) {
-    return "😐";
-  } else if (res < 50) {
-    return "🤧";
-  } else if (res < 70) {
-    return "🤝";
-  } else if (res < 80) {
-    return "❤️‍🩹";
-  } else if (res < 100) {
-    return "💗";
-  } else {
-    return "💖";
+    return ["😤", "Don't worry you're just neutral, not enemies!"];
+    } else if (res < 25) {
+    return ["😐", "You have a mild connection."];
+    } else if (res < 50) {
+    return ["🤧", "There's some bond, but it needs work."];
+    } else if (res < 70) {
+    return ["🤝", "You have a good bond."];
+    } else if (res < 80) {
+    return ["❤️‍🩹", "Your bond is strong."];
+    } else if (res < 100) {
+    return ["💗", "You have a very strong bond."];
+    } else {
+    return ["💖", "You are soulmates!"];
   }
 }

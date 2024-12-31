@@ -72,6 +72,7 @@ body {
     color: #fff;
     margin-top: 60px;
     font-family: 'JetBrains Mono', monospace;
+    box-shadow: inset 0px 0px 20px #BA0057;
     cursor: pointer;
     transition: all 0.3s ease;
     animation: CalcBt 1s infinite;
@@ -94,4 +95,12 @@ body {
 }
 .CalcBt:active{
     transform: scale(0.9);
+}
+
+.support{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    max-width: 60ch;
+    color: #fff;
+    margin-bottom: 40px;
 }
